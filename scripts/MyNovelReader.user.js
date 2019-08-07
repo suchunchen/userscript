@@ -224,6 +224,7 @@ Vue = Vue && Vue.hasOwnProperty('default') ? Vue['default'] : Vue;
 // @include        *://www.biqudu.com/*/*.html
 // @include        *://www.biquge.la/book/*/*.html
 // @include        *://www.biquge.com.tw/*/*.html
+// @include        *://www.biquge.cm/*/*/*.html
 // @include        *://www.biquge.tw/*_*/*.html
 // @include        *://www.biquge.tv/*/*.html
 // @include        *://www.biquge5200.com/*/*.html
@@ -1850,7 +1851,7 @@ const sites = [
     contentSelector: '#J_BookRead',
     contentRemove: 'i.J_Num',
   },
-  
+
 
   // ============== 内容需要2次获取的 =========================
   {siteName: "手打吧",
@@ -2587,13 +2588,15 @@ const sites = [
       siteExample: 'http://www.biquge.com.tw/17_17768/8280656.html',
       contentSelector: "#content"
   },
-  {siteName: "笔趣看",
-    url: /^https?:\/\/www\.biqukan\.com\/\d+_\d+\/\d+.html/,
-    bookTitleSelector: '.path .p > a:last',
-    contentReplace: [
-      'http://www.biqukan.com/.*',
-      '请记住本书首发域名：www.biqukan.com.*',
-    ]
+  {siteName: "笔趣阁",
+      url: /^https?:\/\/www\.biquge\.com\.tw\/\d+_\d+\/\d+.html/,
+      siteExample: 'http://www.biquge.com.tw/17_17768/8280656.html',
+      contentSelector: "#content"
+  },
+  {siteName: "笔趣阁",
+      url: 'https?://www\\.biquge\\.cm/\d+/\d+/\d+.html',
+      siteExample: 'https://www.biquge.cm/8/8509/8032335.html',
+      contentSelector: "#content"
   },
   {siteName: '大主宰小说网',
       url: 'www\\.daizhuzai\\.com/\\d+/\\d+\\.html',
